@@ -1371,11 +1371,11 @@ class paiddownloads_class {
 				}
 			}
 			exit;
-		} else if (isset($_GET['zp_verify'])) {
+		} else if (isset($_GET['zp_verify']) &&  $_GET["Status"] == "OK" ) {
 				$merchant = $this->options["zarinpalwg_merchant"];
 				$amount = $_SESSION["zarinpalwg_amount"];
-				$au = $_GET["au"];
-				$refID = $_GET["refID"];
+				$au = $_GET["Authority"];
+				//$refID = $_GET["refID"];
 				
 				$zp = new nusoap_client("https://www.zarinpal.com/pg/services/WebGate/wsdl", "wsdl");
 				$res = $zp->call("PaymentVerification", array(
