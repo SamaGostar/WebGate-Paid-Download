@@ -1386,7 +1386,7 @@ class paiddownloads_class {
 					)
 				));
 				
-				$res = $res['Status'];
+				$res = $res->Status;
 				$item_number = intval($_COOKIE["zarinpalwg_id"]);
 				$item_name = intval($_COOKIE["zarinpalwg_title"]);
 				$transaction_type = "Sale";
