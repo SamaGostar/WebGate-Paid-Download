@@ -1377,7 +1377,7 @@ class paiddownloads_class {
 				$au = $_GET["Authority"];
 				//$refID = $_GET["refID"];
 				
-				$zp = new nusoap_client("https://www.zarinpal.com/pg/services/WebGate/wsdl", "wsdl");
+				$zp = new nusoap_client("https://de.zarinpal.com/pg/services/WebGate/wsdl", "wsdl");
 				$res = $zp->call("PaymentVerification", array(
 					array(
 						'MerchantID'	 => $merchant ,
@@ -1787,7 +1787,7 @@ class paiddownloads_class {
 				if ($this->options['enable_zarinpalwg'] == "on") {
 					$price = $file_details["price"];
 					$merchantID = $this->options["zarinpalwg_merchant"];
-					$zp = new nusoap_client("https://www.zarinpal.com/pg/services/WebGate/wsdl", "wsdl");
+					$zp = new nusoap_client("https://de.zarinpal.com/pg/services/WebGate/wsdl", "wsdl");
 					$payID = $zp->call('PaymentRequest', array(
 						array(
 									'MerchantID' 	=> $merchantID ,
