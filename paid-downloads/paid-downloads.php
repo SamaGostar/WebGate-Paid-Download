@@ -12,7 +12,7 @@ define('PD_VERSION', 3.15);
 wp_enqueue_script("jquery");
 register_activation_hook(__FILE__, array("paiddownloads_class", "install"));
 require_once("nusoap.php");
-
+session_start();
 class paiddownloads_class {
 	var $options;
 	var $error;
