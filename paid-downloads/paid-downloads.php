@@ -4,7 +4,7 @@ Plugin Name: Paid Downloads پارسی webgate
 Plugin URI: https://ir.zarinpal.com/Labs/Details/WpPaidDownloadModule
 Description: این افزونه به شما کمک می‌کند تا دست‌آوردهای خود در یک فروشگاه ناانگار (مجازی) به فروش برسانید. این افزونه با درگاه زرین‌پال، پرداخت می‌کند.
 Version: 3.15
-Author: Ivan Churakov</a>,<a href="http://haftir.ir" title="مسعود امینی"> توسعه دهنده </a>
+Author: Ivan Churakov</a>,<a href="http://haftir.ir" title="مسعود امینی:  توسعه دهنده" </a>
 Author URI: http://www.icprojects.net/about
 */
 define('PD_RECORDS_PER_PAGE', '20');
@@ -1386,7 +1386,7 @@ class paiddownloads_class {
 					)
 				));
 				
-				$res = $res->Status;
+				$res = $res['Status'];
 				$item_number = intval($_COOKIE["zarinpalwg_id"]);
 				$item_name = intval($_COOKIE["zarinpalwg_title"]);
 				$transaction_type = "Sale";
@@ -1800,7 +1800,7 @@ class paiddownloads_class {
 
 						));
 									
-					if($payID->Status == 100)
+					if($payID['Status'] == 100)
 					{
 							$button .= '
 						<div id="paiddownloads_email_container_'.$button_id.'" style="display: '.($methods == 1 ? 'block' : 'none').';"><input type="text" id="paiddownloads_email_'.$button_id.'" style="font-family: Lucida Sans Unicode,Tahoma,arial, verdana; font-size: 14px; line-height: 14px; margin: 5px 0px; padding: 3px 5px; background: #FFF; border: 1px solid #888; width: 200px; -webkit-border-radius: 3px; border-radius: 3px; color: #666;" value="'.esc_attr(__('Enter your e-mail here', 'paiddownloads')).'" onfocus="if (this.value == \''.esc_attr(__('Enter your e-mail here', 'paiddownloads')).'\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \''.esc_attr(__('Enter your e-mail here', 'paiddownloads')).'\';}"></div>
@@ -1810,11 +1810,11 @@ class paiddownloads_class {
 								paiddownloads_toggle_paiddownloads_email_'.$button_id.'();
 							}
 						</script>' : '').'
-						<form action="https://www.zarinpal.com/pg/StartPay/" '. $payID->Authority .' "/" method="post" style="display:none;">
+						<form action="https://www.zarinpal.com/pg/StartPay/'. $payID['Authority'].'/" method="post" style="display:none;">
 							<input id="zarinpalwg_'.$button_id.'" type="submit" value="حالا بخرید!" style="margin: 0px; padding: 0px;">
 						</form>';
 					}else{
-					$button .= 'خطای شماره ' . $payID->Status ;
+					$button .= 'خطای شماره ' . $payID['Status'] ;
 					}
 					
 				}
