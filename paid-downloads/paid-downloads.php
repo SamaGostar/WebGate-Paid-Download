@@ -491,7 +491,7 @@ class paiddownloads_class {
 									</tr>
 									<tr>
 										<th>کدبازرگانی:</th>
-										<td><input type="text" id="paiddownloads_zarinpalwgwg_merchant" name="paiddownloads_zarinpalwgwg_merchant" value="'.$this->options['zarinpalwg_merchant'].'" class="widefat"'.'><br /><em>خواهشمند است یک کدبازرگانی (Merchant) که از <a href="https://de.zarinpal.com">زرین‌پال</a> دریافت کرده‌اید، بنویسید.</em></td>
+										<td><input type="text" id="paiddownloads_zarinpalwg_merchant" name="paiddownloads_zarinpalwg_merchant" value="'.$this->options['zarinpalwg_merchant'].'" class="widefat"'.'><br /><em>خواهشمند است یک کدبازرگانی (Merchant) که از <a href="https://de.zarinpal.com">زرین‌پال</a> دریافت کرده‌اید، بنویسید.</em></td>
 									</tr>
 								</table>
 								<div class="alignright">
@@ -1676,7 +1676,7 @@ class paiddownloads_class {
 					function paiddownloads_'.$button_id.'() {
 						if (jQuery("#method_paypal_'.$button_id.'").attr("checked")) active_'.$button_id.' = "paypal_'.$button_id.'";
 						else if (jQuery("#method_alertpay_'.$button_id.'").attr("checked")) active_'.$button_id.' = "alertpay_'.$button_id.'";
-						else if (jQuery("#method_zarinpalwgwg_'.$button_id.'").attr("checked")) active_'.$button_id.' = "zarinpalwg_'.$button_id.'";
+						else if (jQuery("#method_zarinpalwg_'.$button_id.'").attr("checked")) active_'.$button_id.' = "zarinpalwg_'.$button_id.'";
 						if (active_'.$button_id.' == "zarinpalwg_'.$button_id.'") {
 							if (!jQuery("#paiddownloads_email_'.$button_id.'")) {
 								alert("'.esc_attr(__('Please enter valid e-mail. Download link will be sent to this e-mail address.', 'paiddownloads')).'");
@@ -1734,7 +1734,7 @@ class paiddownloads_class {
 					if ($this->options['enable_zarinpalwg'] == "on") {
 						$button .='
 					<div style="background: transparent url('.plugins_url('/images/logo_zarinpal.png', __FILE__).') 25px 0px no-repeat; height: 26px; width: 120px; float: left;">
-						<input type="radio" id="method_zarinpalwgwg_'.$button_id.'" name="method_'.$button_id.'" style="margin: 4px 0px;" onclick="paiddownloads_toggle_paiddownloads_email_'.$button_id.'();"'.$checked.'>
+						<input type="radio" id="method_zarinpalwg_'.$button_id.'" name="method_'.$button_id.'" style="margin: 4px 0px;" onclick="paiddownloads_toggle_paiddownloads_email_'.$button_id.'();"'.$checked.'>
 					</div>';
 						$checked = '';
 					}
