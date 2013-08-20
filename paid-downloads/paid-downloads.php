@@ -1455,7 +1455,7 @@ class paiddownloads_class {
 						<div style="width: 500px; padding: 5px;background: red;color:#FFF; border:5px dashed #000; font: 10pt Tahoma; direction:rtl;margin: 200px auto">
 						تراکنش به پایان نرسید! از این بابت از شما عذرخواهی می کنیم. لطفاً با مدیر سایت تماس بگیرید.
 						</div>
-					';
+					'.$res;
 			}
 			$_COOKIE["zarinpalwg_id"] = "";
 			$_COOKIE["zarinpalwg_title"] = "";
