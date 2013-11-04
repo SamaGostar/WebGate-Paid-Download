@@ -1395,7 +1395,7 @@ $zp->soap_defencoding = 'UTF-8';
 				$currency = " tomans";
 				$first_name = $payer;
 				$last_name = $payer;
-				if ($res === 100) {
+				if ($res == 100) {
 					$file_details = $wpdb->get_row("SELECT * FROM ".$wpdb->prefix."pd_files WHERE id = '" . intval($item_number)."'", ARRAY_A);
 					if (intval($file_details["id"]) == 0) $payment_status = "unrecognized";
 					else {
