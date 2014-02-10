@@ -1435,6 +1435,7 @@ $zp->soap_defencoding = 'UTF-8';
 						<div style="width: 500px; padding: 5px;background: lightgreen; border:5px dashed #000; font: 10pt Tahoma; direction:rtl;margin: 200px auto">
 						با تشکر از خرید شما! هم اکنون ما یک نامه به پست الکترونیکی که وارد کردید، فرستادیم. در آن جا می توانید محصول موردنظر را دانلود کنید. لطفاً اطلاعات زیر را برای پیگیری های بعدی نگهدارید:<br />
 						شماره رسید دیجیتالی: <b>'.$_GET["au"].'</b><br>
+						<a href="'.$download_link.'">برای دانلود اینجا کلیک نمایید</a>
 						</div>
 					';
 					die();
