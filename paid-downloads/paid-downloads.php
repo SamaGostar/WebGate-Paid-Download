@@ -5,7 +5,7 @@ Plugin Name: Paid Downloads پارسی webgate
 Plugin URI: https://ir.zarinpal.com/Labs/Details/WpPaidDownloadModule
 Description: این افزونه به شما کمک می‌کند تا دست‌آوردهای خود در یک فروشگاه ناانگار (مجازی) به فروش برسانید. این افزونه با درگاه زرین‌پال، پرداخت می‌کند.
 Version: 3.15
-Author: Ivan Churakov</a>,<a href="http://haftir.ir" title="مسعود امینی:  توسعه دهنده" </a>
+Author: Ivan Churakov,<a href="http://haftir.ir" title="مسعود امینی:  توسعه دهنده" </a>
 Author URI: http://www.icprojects.net/about
 */
 define('PD_RECORDS_PER_PAGE', '20');
